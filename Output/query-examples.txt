@@ -1,0 +1,7 @@
+DATABASE DESIGN OUTPUT
+Entities: users, posts, comments
+PKs: users.id, posts.id, comments.id
+FKs: posts.author_id -> users.id; comments.post_id -> posts.id; comments.user_id -> users.id
+Constraints: unique username/email/slug; valid post/comment statuses; required relationships.
+Queries provided: insert user/post; select published posts with author; select visible comments; update post; delete comment; aggregate comment counts.
+MongoDB examples: validators, indexes, insertOne, find/sort/limit, aggregate, updateOne and deleteOne.
